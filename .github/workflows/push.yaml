@@ -1,0 +1,34 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: '8.1'
+          #ssh_key: ${{ secrets.SSH_KEY }}
+          #ssh_key_pub: ${{ secrets.SSH_KEY_PUB }}
+      - uses: anchore/sbom-action@v0
+        with:
+          path: .
+          output-file: ./bom.json
+          artifact-name: bom.json
+          format: cyclonedx-json
+      # Transmit a copy of our generated SBOM to Manifest
+      - name: Transmit generated SBOM to Manifest
+        uses: manifest-cyber/manifest-github-action@main
+        id: transmit
+        with:
+          apiKey: ${{ secrets.MANIFEST_API_KEY }}
+          bomFilePath: "./bom.json"
+          sbom-version: ""
+          sbom-name: testing-php-name
+          sbom-output: cyclonedx-json
+ 

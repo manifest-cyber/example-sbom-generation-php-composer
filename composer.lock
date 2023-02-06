@@ -58,30 +58,6 @@
             "time": "2018-09-09T12:40:38+00:00"
         },
         {
-            "name": "php-actions/example-private-repo",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:php-actions/example-private-repo.git",
-                "reference": "e7f9c74d461b820aecaf5ed7a668e03951b692fe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-actions/example-private-repo/zipball/e7f9c74d461b820aecaf5ed7a668e03951b692fe",
-                "reference": "e7f9c74d461b820aecaf5ed7a668e03951b692fe",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "App\\": "./src/"
-                }
-            },
-            "description": "This repo is private, used within example-composer.",
-            "time": "2020-08-12T13:00:17+00:00"
-        },
-        {
             "name": "phpgt/cli",
             "version": "v1.3.2",
             "source": {
@@ -1602,9 +1578,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "php-actions/example-private-repo": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
