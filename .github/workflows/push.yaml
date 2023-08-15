@@ -15,20 +15,14 @@ jobs:
           php_version: '8.1'
           #ssh_key: ${{ secrets.SSH_KEY }}
           #ssh_key_pub: ${{ secrets.SSH_KEY_PUB }}
-      - uses: anchore/sbom-action@v0
-        with:
-          path: .
-          output-file: ./bom.json
-          artifact-name: bom.json
-          format: cyclonedx-json
-      # Transmit a copy of our generated SBOM to Manifest
+      # Generate and publish a copy of our generated SBOM to Manifest
       - name: Transmit generated SBOM to Manifest
         uses: manifest-cyber/manifest-github-action@main
         id: transmit
         with:
           apiKey: ${{ secrets.MANIFEST_API_KEY }}
           bomFilePath: "./bom.json"
-          sbom-version: ""
-          sbom-name: testing-php-name
-          sbom-output: cyclonedx-json
+          sbomVersion: ""
+          sbomName: testing-php-name
+          sbomOutput: cyclonedx-json
  
