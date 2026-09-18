@@ -3,7 +3,7 @@
 	"description": "An example project that uses php-actions/composer",
 	"repositories": [],
 	"require": {
-		"phpgt/webengine": "^v4"
+		"phpgt/webengine": "^v5.0.0"
 	},
 
 	"autoload": {
