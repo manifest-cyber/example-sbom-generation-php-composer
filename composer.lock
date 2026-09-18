@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da7631be212f9b8d7181b80ae8e49a89",
+    "content-hash": "bed99d29e384f9b36928296df10b05bf",
     "packages": [
         {
             "name": "magicalex/write-ini-file",
@@ -987,16 +987,16 @@
         },
         {
             "name": "phpgt/webengine",
-            "version": "v4.0.4",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhpGt/WebEngine.git",
-                "reference": "0316a042a1a05697b58d56f2e888a5f00c181aa8"
+                "reference": "724791f456968781b6ec66bd800beec11915d123"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhpGt/WebEngine/zipball/0316a042a1a05697b58d56f2e888a5f00c181aa8",
-                "reference": "0316a042a1a05697b58d56f2e888a5f00c181aa8",
+                "url": "https://api.github.com/repos/PhpGt/WebEngine/zipball/724791f456968781b6ec66bd800beec11915d123",
+                "reference": "724791f456968781b6ec66bd800beec11915d123",
                 "shasum": ""
             },
             "require": {
@@ -1019,8 +1019,8 @@
                 "willdurand/negotiation": "^3.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "~1.1",
-                "phpunit/phpunit": "~9.5"
+                "phpstan/phpstan": "^1.4",
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "autoload": {
@@ -1047,7 +1047,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PhpGt/WebEngine/issues",
-                "source": "https://github.com/PhpGt/WebEngine/tree/v4.0.4"
+                "source": "https://github.com/PhpGt/WebEngine/tree/v4.0.6"
             },
             "funding": [
                 {
@@ -1055,7 +1055,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-02T08:45:12+00:00"
+            "time": "2022-04-29T11:36:10+00:00"
         },
         {
             "name": "psr/container",
@@ -1302,21 +1302,21 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                },
                 "branch-alias": {
                     "dev-main": "1.23-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1581,7 +1581,7 @@
     "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
