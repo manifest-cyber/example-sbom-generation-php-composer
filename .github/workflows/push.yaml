@@ -10,12 +10,12 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Install dependencies
-        uses: php-actions/composer@v6
+        uses: php-actions/composer@8a65f0d3c6a1d17ca4800491a40b5756a4c164f3 # v6
         with:
           php_version: '8.1'
           #ssh_key: ${{ secrets.SSH_KEY }}
           #ssh_key_pub: ${{ secrets.SSH_KEY_PUB }}
-      - uses: anchore/sbom-action@v0
+      - uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0
         with:
           path: .
           output-file: ./bom.json
@@ -23,7 +23,7 @@ jobs:
           format: cyclonedx-json
       # Transmit a copy of our generated SBOM to Manifest
       - name: Transmit generated SBOM to Manifest
-        uses: manifest-cyber/manifest-github-action@main
+        uses: manifest-cyber/manifest-github-action@29932f237b5c74e7a48c23b155ff7d5c1f17b49c # main
         id: transmit
         with:
           apiKey: ${{ secrets.MANIFEST_API_KEY }}
